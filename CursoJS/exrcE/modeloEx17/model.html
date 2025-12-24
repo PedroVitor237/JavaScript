@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel = "stylesheet" href = "estilo.css">
+
+</head>
+<body>
+    <header>
+        <h1>Gerador de Tabuada</h1>
+        <h3>Multiplicação</h3>
+    </header>
+    <section> 
+        <!-- Entrada de dados -->
+        <div>
+            <p>Número: <input type="number" name="txtnumber" id="txtnumber" placeholder="Indique um número:"> <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()"></p>
+            
+        </div>
+        <div>
+            <p id="res">Tabuada:</p>
+            <select name="tabuada" id="seltab" size="10">
+                <option value="">Resultados: </option>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;pedrovitor237</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

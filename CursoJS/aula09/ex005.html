@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background: rgb(235, 91, 55);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id = 'msg'>Clique</div>
+    <script>
+        window.document.write(window.document.URL + '<br/>')
+        let p1 = window.document.getElementsByTagName('p')[1]
+        let corpo = window.document.body
+        let d = window.document.getElementById('msg')
+        let d1 = window.document.querySelector('div#msg') //"#" = quando div & "." = quando classe
+        window.document.writeln('Está escrito assim: ' + p1.innerText + '<br/>')
+        window.document.writeln(`Está escrito assim: ${p1.innerText} <br/>`)
+        window.document.writeln(p1.innerHTML + '<br/>')
+        //window.document.body.style.background = 'black'
+        //corpo.style.background = 'rgb(0,0,0)'
+        p1.style.color = 'blue'
+        d.style.background = 'orange'
+        d.innerText = 'Aguardando...'
+        //window.document.getElementById('msg').innerText = 'Papapapa'
+        d1.style.color = 'blue'
+        window.document.writeln(window.navigator.appName)
+
+    </script>
+</body>
+</html>

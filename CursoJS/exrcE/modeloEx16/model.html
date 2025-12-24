@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel = "stylesheet" href = "estilo.css">
+
+</head>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+    <section> 
+        <!-- Formulário de entrada -->
+        <div id="dados">
+            <p>Número de Início
+                <input type="number" name="txtinicio" id="txtinicio" placeholder="Inicio">
+            </p>
+            <p>Número de Fim
+                <input type="number" name="txtfim" id="txtfim" placeholder="Fim">
+            </p>
+            <p>Salto
+                <input type="number" name="txtsalto" id="txtsalto" placeholder="Salto">
+            </p>
+            <p>
+                <input type="button" value="Contar" onclick="contar()">
+            </p>
+        </div>
+        <!-- Resultado -->
+        <div id="resultado">
+            <p>Resultado:</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;pedrovitor237</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: rgb(226, 139, 24);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id = 'area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div> //Evento feito em HTML//-->
+    <div id = 'area'>
+        Interaja...
+    </div>
+    <script>
+        //Eventos em JavaScript
+        let a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {
+            //let area = window.document.getElementById('area')
+            //Variavel "a" está em escopo global, podendendo ter seus valores acessados por todas as funções
+            //Porem isso não é considerado "Boa Prática"
+            a.innerText = 'Clicou!'
+            a.style.background = 'blue'
+        }
+        function entrar() {
+            //O seguinte método é para corrigir o problema de Escopo em usar a variavel "a"//
+            let area = a //window.document.getElementById('area')
+            area.innerText = 'Entradada de mouse!'
+        }
+        function sair() {
+            let area = a //window.document.getElementById('area')
+            area.innerText = 'Saiu!'
+            area.style.background = /*'orange'*/'rgb(226, 139, 24)'
+        } 
+    </script>
+</body>
+</html>

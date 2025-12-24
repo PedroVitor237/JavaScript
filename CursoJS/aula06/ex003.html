@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa 2</title>
+    <style>
+        body {
+            background-color: rgb(65, 65, 145);
+            color: white;
+            font: normal 15pt Arial;
+            /* Comentario rm CSS */
+        }
+        h1 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1> <!-- comentario em HTML --> 
+    <h6>Anawê Takohá!</h6>
+    <h6>Hello world!</h6>
+    <p>Tá fazido!!!</p>
+    <script>
+        //window.alert("Mensagem (window.alert)")
+        //alert('Mensagem (alert)')
+        //window.confirm('"Tá me olhando por quê?"')
+        //confirm('Teste (window.confirm)')
+        let nome = window.prompt('Qual é o seu vulgo? (window.prompt)')
+        window.alert('É uma honra te conhecer ' + nome + '!')
+        let n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        let n2 = Number.parseFloat(window.prompt('Digite um número: '))
+        let s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) //modelo "template string", "${}" = place holder
+        //window.prompt retorna string
+        //Number.parseInt(n): converte para Integer
+        //Number.parseFloat(n): converte para Float
+        //Number(n): o proprio JavaScript interpreta se é um valor inteiro ou de ponto flutuante
+        //String(n): converte para cadeia de caracteres (string)
+        //n.toString(): converte para string (quando ja se tem  o valor (n))
+        let exemp = 'JavaScript'
+        exemp.length //quantidade de caracteres a string possui
+        exemp.toUpperCase() //transpor para maicusculas
+        exemp.toLowerCase() //transpor para minusculas
+    </script>
+</body>
+</html>
