@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro programa 1</title>
+    <title>My First Program</title>
     <style>
         body {
             background-color: rgb(65, 65, 145);
             color: white;
             font: normal 15pt Arial;
-            /* Comentario em CSS */
+            /* Commentary in CSS */
         }
         h1 {
             color: orange;
@@ -17,17 +17,28 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1> <!-- comentario em HTML --> 
-    <h6>Anawê Takohá!</h6>
+    <h1>Olá, mundo!</h1> <!-- Commentary in HTML --> 
     <h6>Hello world!</h6>
-    <p>Tá fazido!!!</p>
+    <p></p>
+
     <script>
-        //window.alert("Mensagem (window.alert)")
-        //alert('Mensagem (alert)')
-        //window.confirm('"Tá me olhando por quê?"')
-        //confirm('Teste (window.confirm)')
-        let nome = window.prompt('Qual é o seu vulgo? (window.prompt)')
-        window.alert('É uma honra te conhecer ' + nome + '!')
+        /* Commentary in JavaScript */
+        // This is a single line comment in JavaScript
+
+        // Saving the user's name in a variable and displaying it using an alert
+        let name = window.prompt('What is your name? \nUsing: (window.prompt)')
+        window.alert('It is a pleasure to meet you ' + name + '!')
+
+        // Displaying the user's name on the webpage using innerHTML and styling it with CSS properties
+        let displayName = document.getElementsByTagName('p')
+        displayName[0].innerHTML = `It is a pleasure to meet you  <strong> ${name} </strong>!`
+        // Styling the displayed name with CSS properties dinamically using JavaScript
+        displayName[0].style.borderRadius = '10px'
+        displayName[0].style.backgroundColor = 'white'
+        displayName[0].style.color = 'black'
+        displayName[0].style.padding = '10px'
+        displayName[0].style.width = 'fit-content'
+
     </script>
 </body>
 </html>
