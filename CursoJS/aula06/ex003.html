@@ -1,49 +1,79 @@
-<!-- Continue the corrections from this file -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro programa 2</title>
+
+    <title>My First Program 1</title>
+    
     <style>
+
         body {
             background-color: rgb(65, 65, 145);
             color: white;
             font: normal 15pt Arial;
-            /* Comentario rm CSS */
         }
+
         h1 {
             color: orange;
         }
+
+        /* Comentario rm CSS */
+
     </style>
+
 </head>
 <body>
-    <h1>Olá, mundo!</h1> <!-- comentario em HTML --> 
-    <h6>Anawê Takohá!</h6>
+
+    <!-- Commentary in HTML -->
+    
+    <h1>Olá, mundo!</h1>  
     <h6>Hello world!</h6>
-    <p>Tá fazido!!!</p>
+
+    <p></p>
+
     <script>
-        //window.alert("Mensagem (window.alert)")
-        //alert('Mensagem (alert)')
-        //window.confirm('"Tá me olhando por quê?"')
-        //confirm('Teste (window.confirm)')
-        let nome = window.prompt('Qual é o seu vulgo? (window.prompt)')
-        window.alert('É uma honra te conhecer ' + nome + '!')
-        let n1 = Number.parseFloat(window.prompt('Digite um número: '))
-        let n2 = Number.parseFloat(window.prompt('Digite um número: '))
+        
+        /* Commentary in JavaScript */
+        // This is a single line comment in JavaScript
+
+        let n1 = Number.parseFloat(window.prompt('Type a number: '))
+        let n2 = Number.parseFloat(window.prompt('Type another number: '))
+        
         let s = n1 + n2
-        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) //modelo "template string", "${}" = place holder
-        //window.prompt retorna string
-        //Number.parseInt(n): converte para Integer
-        //Number.parseFloat(n): converte para Float
-        //Number(n): o proprio JavaScript interpreta se é um valor inteiro ou de ponto flutuante
-        //String(n): converte para cadeia de caracteres (string)
-        //n.toString(): converte para string (quando ja se tem  o valor (n))
+
+        window.alert(`The sum of ${n1} and ${n2} is equal to ${s}`) //That is a `template string`, `${}`= place holder
+
+        /* 
+        window.prompt() always returns a string, 
+        so we need to convert it to a number before performing any mathematical operations. 
+        We can use the following functions to convert the string to a number: 
+        */
+
+        // Number.parseInt(n): converts Integer
+        // Number.parseFloat(n): converts to Float
+        // Number(n): the JavaScript itself interprets whether it's an integer or floating-point value
+
+        // String(n): converts to a string (chain of characters)
+        // n.toString(): converts to string (when you already have the value (n))
+
+        /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+        /* String properties and methods */
         let exemp = 'JavaScript'
-        exemp.length //quantidade de caracteres a string possui
-        exemp.toUpperCase() //transpor para maicusculas
-        exemp.toLowerCase() //transpor para minusculas
+
+        exemp.length               //returns the number of characters in the string
+        exemp.toUpperCase()        //returns a new string with all characters converted to uppercase
+        exemp.toLowerCase()        //returns a new string with all characters converted to lowercase
+        
+        exemp[0]                   //returns the character at the specified index (0-based)
+        exemp.indexOf('S')         //returns the index of the first occurrence of the specified character or substring
+        exemp.slice(0, 4)          //returns a portion of the string from the start index to the end index (not inclusive)  
+        exemp.trim()               //returns a new string with whitespace removed from both ends of the string
+        exemp.replace('a', '@')    //returns a new string with the first occurrence of the specified character or substring replaced with the new value
+        exemp.replaceAll('a', '@') //returns a new string with all occurrences of the specified character or substring replaced with the new value
+
     </script>
+
 </body>
 </html>
