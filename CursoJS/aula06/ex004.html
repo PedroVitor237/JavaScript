@@ -1,5 +1,3 @@
-<!-- Continue corrections from this file -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,15 +11,23 @@
     </style>
 </head>
 <body>
+ 
     <script>
-        let nome = window.prompt('Seu nome?')
-        document.writeln(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras<br/>`)
-        document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}`)
-        //let n1 = window.prompt('Digite um número: ')
-        //document.writeln(n1.toFixed(2)) //número com duas casas decimais
-        //n1.toFixed(2).replace('.', ',') //substitui ponto por vírgula
-        //document.writeln(n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})) //formata número para moeda brasileira
         
+        let name = window.prompt('What is your name?')
+        
+        document.writeln(`Hello <strong>${name}</strong>! Your name has ${name.length} letters<br/>`)
+        document.writeln(`Your name in uppercase is ${name.toUpperCase()}<br/>`)
+        document.writeln('<hr/>') //horizontal line
+
+        let number = Number(window.prompt('Enter a number: '))
+
+        document.writeln(`The number you entered is ${number}<br/>`)
+        document.writeln(`The number with two decimal places is ${number.toFixed(2)}<br/>`)
+        /*number.toFixed(2).replace('.', ',') //replaces dot with comma */ 
+        document.writeln(`The number formatted for Brazilian currency is ${number.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`)
+    
     </script>
+
 </body>
 </html>
