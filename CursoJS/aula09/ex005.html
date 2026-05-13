@@ -1,11 +1,11 @@
-<!-- Continue corrections from this file -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DOM</title>
+    
     <style>
         body {
             background: rgb(235, 91, 55);
@@ -16,28 +16,49 @@
     
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div id = 'msg'>Clique</div>
+
+    <h1>Starting DOM studies</h1>
+    <p><strong>Tests:</strong></p>
+    <p>Learning <strong>DOM</strong> in JavaScript</p>
+
+    <div id = 'msg'>Message that will be dynamicly updated by JavaScript</div>
+
     <script>
-        window.document.write(window.document.URL + '<br/>')
+
+        //Selecting elements from the document
         let p1 = window.document.getElementsByTagName('p')[1]
-        let corpo = window.document.body
-        let d = window.document.getElementById('msg')
-        let d1 = window.document.querySelector('div#msg') //"#" = quando div & "." = quando classe
-        window.document.writeln('Está escrito assim: ' + p1.innerText + '<br/>')
-        window.document.writeln(`Está escrito assim: ${p1.innerText} <br/>`)
-        window.document.writeln(p1.innerHTML + '<br/>')
-        //window.document.body.style.background = 'black'
-        //corpo.style.background = 'rgb(0,0,0)'
+        let bodyElement = window.document.body
+
+        //Alternative ways to select the same element
+        let d = window.document.getElementById('msg') //Selecting the div element with .getElementById
+        let d1 = window.document.querySelector('div#msg') //Selecting the div element with id "msg" using querySelector
+        
+        //Manipulating the content of the selected element//
+        window.document.writeln(`That's what second paragraph says: ${p1.innerText} <br/>`)
+
+        window.document.writeln(p1.innerHTML + '<br/>') //Show the HTML content of the selected element, including the effects from tags
+        
+        //Changing the styles of the selected elements 
+        //(Two ways to change the background color of the body element)
+        window.document.body.style.background = 'black'
+        bodyElement.style.background = 'rgb(116, 194, 85)'
+        
+        //Changing the text color and background color of the selected elements
         p1.style.color = 'blue'
+        d.style.color = 'blue'
         d.style.background = 'orange'
-        d.innerText = 'Aguardando...'
-        //window.document.getElementById('msg').innerText = 'Papapapa'
-        d1.style.color = 'blue'
-        window.document.writeln(window.navigator.appName)
+
+        //Changing the text of the selected element
+        d.innerText = 'Waiting...'
+
+        window.document.writeln('<br/>')
+        window.document.writeln('Accessing document properties:' + '<br/>')
+
+        //Showing some properties of the window and document objects
+        window.document.writeln(`<ul> <li> ${window.navigator.appName} </li>`) //Show the name of the browser
+        window.document.writeln(`<li> ${window.document.URL} </li> </ul>`) //Show the page URL
 
     </script>
+
 </body>
 </html>
