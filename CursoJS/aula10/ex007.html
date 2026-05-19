@@ -1,40 +1,61 @@
-<!-- Continue corrections from this file -->
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soma de Números</title>
+    <title>Summing Numbers</title>
     <style>
         body {
             font: normal 18pt Times;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         input {
             font: normal 18pt Arial;
             width: 100px;
+            margin-top: 10px;
         }
         div#res {
-            margin-top: 10px;
+            margin-top: 20px;
+            background-color: rgb(174, 248, 248);
+            width: fit-content;
         }
     </style>
 </head>
 <body>
+    
     <h1>Jênio!</h1>
-    <input type = "number" name = "txtn1" id = "txtn1"> +
+    <h2>Summing Numbers</h2>
+
+    <!-- Input fields and button to trigger the sum function -->
+    <input type = "number" name = "txtn1" id = "txtn1"> 
+    <p>+</p>
     <input type = "number" name = "txtn2" id = "txtn2">
-    <input type = "button" value = "Somar" onclick = "somar()">
-    <div id = "res">Rezuutado</div>
+    <input type = "button" value = "Sum" onclick = "sum()">
+
+    <!-- Div to display the result of the sum -->
+    <div id = "res">Result:</div>
+
     <script>
-        function somar() {
+        function sum() {
+
+            // Getting and assigning the input elements and result display element to variables
             let tn1 = window.document.getElementById('txtn1')
             let tn2 = window.document.querySelector('input#txtn2')
-            let res = window.document.getElementById('res')
+            let resultDisplay = window.document.getElementById('res')
+
+            // Convert the input values to numbers
             let n1 = Number(tn1.value)
             let n2 = Number(tn2.value)
+
+            // Calculate the sum and display the result
             let s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
+            resultDisplay.innerHTML = `The sum between ${n1} and ${n2} is: <strong>${s}</strong>`
+
         }
     </script>
+
 </body>
 </html>
