@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div#firstArea {
+            background: rgb(226, 139, 24);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#secondArea {
+            background: rgb(226, 139, 24);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h3>First</h3>
+
+    <!-- DOM event added directly in HTML -->
+    <div id = 'firstArea' onclick="clickFirst()" onmouseenter="enterFirst()" onmouseout="leaveOutFirst()">
+        Interact...
+    </div> 
+
+    
+    <h3>Second</h3>
+    
+    <!-- Preparing to add events -->
+    <div id = 'secondArea'>
+        Interact...
+    </div>
+
+    <script src="scriptFirstArea.js"></script>
+    <script src="scriptSecondArea.js"></script>
+</body>
+</html>
