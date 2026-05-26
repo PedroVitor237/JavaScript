@@ -1,20 +1,29 @@
-//ex008
-let vel = 60
-console.log(`A velocidade do seu carro é ${vel}Km/h`)
-//Condição Simples
-if (vel > 60) {
-    console.log('Você ultrapassou a velocidade permitida. MULTADO!')
-}
-console.log('Dirija sempre usando cinto de segurança!')
-
+//exercise 008
+console.log('-----------------------------')
+console.log('Exercise 008:')
 console.log()
 
-//ex009
+let currentSpeed = 60
+console.log(`You are driving at ${currentSpeed}Km/h`)
+//Simple Condition
+if (currentSpeed > 60) {
+    console.log('You have exceeded the allowed speed limit. FINE APPLIED!')
+}
+console.log('Always wear your seatbelt when driving!')
+
+
+console.log('-----------------------------')
+
+
+//exercise 009
+console.log('Exercise 009:')
+console.log() 
+
 let country = 'EUA'
-console.log(`Nascendo em ${country}`)
-//Condição Composta
-if (country != 'Brasil') {
-    console.log('Você é estrangeiro!')
+console.log(`Born in ${country}`)
+//Compound Condition
+if (country != 'Brazil') {
+    console.log('You are a foreigner!')
 } else {
-    console.log('Você é brasileiro!')
+    console.log('You are Brazilian!')
 }
