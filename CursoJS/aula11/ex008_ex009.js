@@ -1,7 +1,7 @@
 //exercise 008
-console.log('-----------------------------')
+console.log('------------------------------')
 console.log('Exercise 008:')
-console.log()
+console.log('------------------------------')
 
 let currentSpeed = 60
 console.log(`You are driving at ${currentSpeed}Km/h`)
@@ -12,12 +12,13 @@ if (currentSpeed > 60) {
 console.log('Always wear your seatbelt when driving!')
 
 
-console.log('-----------------------------')
+console.log()
+console.log('------------------------------')
 
 
 //exercise 009
 console.log('Exercise 009:')
-console.log() 
+console.log('------------------------------') 
 
 let country = 'EUA'
 console.log(`Born in ${country}`)
