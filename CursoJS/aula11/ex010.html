@@ -7,24 +7,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SistmMultas</title>
+    <title>Traffic Fine System</title>
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="Verificar" onclick="calcular()">  
-    <div id="res"></div>
+    <h1>Speed Ticket System</h1>
+
+    <label for="txtspeed">
+        Speed of the car:
+        <input type="number" name="txtspeed" id="txtspeed" placeholder="Enter the speed of the car">
+        Km/h
+    </label>
+    
+    <!-- Another way to add a button -->
+    <input type="button" value="Check" onclick="calculate()">  
+
+    <!-- Result display -->
+    <div id="result"></div>
+
     <script>
-        function calcular() {
-            let txtv = window.document.querySelector('input#txtvel')
-            let res = window.document.querySelector('div#res')
-            let vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
-            if (vel > 60) {
-                res.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>'
+        function calculate() {
+            let txtSpeed = window.document.querySelector('input#txtspeed')
+            let result = window.document.querySelector('div#result')
+            let speed = Number(txtSpeed.value)
+            
+            result.innerHTML = `<p>The current speed of the car is <strong>${speed}Km/h</strong></p>`
+            
+            if (speed > 60) {
+                // If the condition, speed is greater than 60, is met, this message will appear
+                result.innerHTML += '<p>You are <strong>FINED</strong> for speeding</p>'
             }
-            res.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+            // Always show this message, even if the condition is not met
+            result.innerHTML += '<p>Always wear your seatbelt when driving</p>'
         }
     </script>
 </body>
 </html>
+
+
+
+<!-- Add toggle for unit measurement: Km/h or mph -->
