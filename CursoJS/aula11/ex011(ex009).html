@@ -9,9 +9,12 @@
     <style>
         body{
             background-color: rgb(25, 167, 185);
+            padding: 10px;
+            margin: 10px;
         }
         input{
-            background-color: rgb(69, 187, 202);
+            background-color: rgb(198, 241, 247);
+            margin-bottom: 20px;
         }
         div#res {
             margin-top: 10px;
@@ -37,7 +40,7 @@
             result.innerHTML = `If the country of birth is <strong>${nacionality.value}</strong>...`
 
             // Thats a compound condition 
-            if (nacionality.value != 'Brazil') {
+            if (nacionality.value != 'Brazil' && nacionality.value != 'Brasil') {
                 result.innerHTML += '<p>The individual is a <strong>foreigner</strong>!</p>'
             } else {
                 result.innerHTML += '<p>The individual is a <strong>Brazilian</strong>!</p>'
