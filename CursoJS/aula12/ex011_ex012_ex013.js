@@ -1,21 +1,23 @@
 // Continue corrections from this file      
 
 //ex011
-//Condições Aninhadas
+//Nested Conditions
 console.log("ex011:")
+console.log("Legal voting age criteria:")
 
-let idade = 20
-console.log(`${idade}`)
-if (idade < 16) {
-    console.log("Não vota")
-} else if (idade < 18 || idade > 65) {
-    console.log("Voto opcional")
+let age = 20
+console.log(`${age}`)
+
+if (age < 16) {
+    console.log("Dont vote")
+} else if (age < 18 || age > 65) {
+    console.log("Optional vote")
 } else {
-    console.log("Voto obrigatório")
+    console.log("Mandatory vote")
 }
 
 //ex012
-//Condições Aninhadas
+//Nested Conditions
 console.log("ex012:")
 
 let agr = new Date() 
