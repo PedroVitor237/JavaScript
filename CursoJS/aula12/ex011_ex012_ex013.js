@@ -20,22 +20,28 @@ if (age < 16) {
 //Nested Conditions
 console.log("ex012:")
 
-let agr = new Date() 
-let hora = agr.getHours()
-let minut = agr.getMinutes()
-console.log(`Agora são exatamente ${hora} horas e ${minut} minutos`)
-if (hora < 12) {
-    console.log("Bom dia!")
-} else if (hora < 18) {
-    console.log("Boa tarde!")
+let now = new Date() 
+let hour = now.getHours()
+let minute = now.getMinutes()
+console.log(`It is ${hour} hours and ${minute} minutes`)
+
+if (hour < 5) {
+    console.log("Good midnight!")
+    console.log("It's a proper time to sleep!")
+} else if (hour < 12) {
+    console.log("Good morning!")
+} else if (hour < 18) {
+    console.log("Good afternoon!")
+} else if (hour < 23) {
+    console.log("Good evening!")
 } else {
-    console.log("Boa noite")
+    console.log("Good night!")
 }
 
 //ex013
 //Condições Múltiplas (Switch case)
 console.log("ex013:")
-let dSeman = agr.getDay()
+let dSeman = now.getDay()
 console.log(dSeman)
 
 switch (dSeman) {
