@@ -39,34 +39,34 @@ if (hour < 5) {
 }
 
 //ex013
-//Condições Múltiplas (Switch case)
+//(Switch case)
 console.log("ex013:")
-let dSeman = now.getDay()
-console.log(dSeman)
+let weekDay = now.getDay()
+console.log(weekDay)
 
-switch (dSeman) {
+switch (weekDay) {
     case 0:
-        console.log('Domingo')
+        console.log('Sunday')
         break
     case 1:
-        console.log('Segunda')
+        console.log('Monday')
         break
     case 2:
-        console.log('Terça-Feira')
+        console.log('Tuesday')
         break
     case 3:
-        console.log('Quarta-Feira')
+        console.log('Wednesday')
         break
     case 4:
-        console.log('Quinta-Feira')
+        console.log('Thursday')
         break
     case 5:
-        console.log('Sexta-Feira')
+        console.log('Friday')
         break
     case 6:
-        console.log('Sábado')
+        console.log('Saturday')
         break
     default:
-        console.log('[ERRO] Dia Inválido')
+        console.log('[ERRO] Invalid Day!')
         break      
 }
