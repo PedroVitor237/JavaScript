@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<!-- ex009 -->
+<!-- Thats a version in HTML of the exercise -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENTILICOS</title>
+    <title>Gentilics</title>
     <style>
         body{
             background-color: rgb(25, 167, 185);
+            padding: 10px;
+            margin: 10px;
         }
         input{
-            background-color: rgb(69, 187, 202);
+            background-color: rgb(198, 241, 247);
+            margin-bottom: 20px;
         }
         div#res {
             margin-top: 10px;
@@ -17,19 +22,28 @@
     </style>
 </head>
 <body>
-    <h1>Nacionalidade</h1>
-    Informe o país de nascimento: <input type="text" name="txt0" id="txt0">
-    <input type="button" value="Verificar" onclick="verify()">
-    <div id="res">Gentilico...</div>
+
+    <h1>Nationality</h1>
+    <label for="txtcountryname">
+        Enter the country of birth: 
+        <input type="text" name="txtcountryname" id="txtcountryname" placeholder="Enter the country of birth">
+    </label>
+    
+    <input type="button" value="Verify" onclick="verify()">
+    <div id="result">Gentilic...</div>
+
     <script>
         function verify() {
-            let res = window.document.querySelector('div#res')
-            let nacinldd = window.document.querySelector('input#txt0')
-            res.innerHTML = `Se o país de nascimento é <strong>${nacinldd.value}</strong>...`
-            if (nacinldd.value != 'Brasil') {
-                res.innerHTML += '<p>O indivíduo é <strong>estrangeiro</strong>!</p>'
+            let result = window.document.querySelector('div#result')
+            let nacionality = window.document.querySelector('input#txtcountryname')
+
+            result.innerHTML = `If the country of birth is <strong>${nacionality.value}</strong>...`
+
+            // Thats a compound condition 
+            if (nacionality.value != 'Brazil' && nacionality.value != 'Brasil') {
+                result.innerHTML += '<p>The individual is a <strong>foreigner</strong>!</p>'
             } else {
-                res.innerHTML += '<p>O indivíduo é <strong>brasileiro</strong>!</p>'
+                result.innerHTML += '<p>The individual is a <strong>Brazilian</strong>!</p>'
             }
         }
     </script>

@@ -1,3 +1,5 @@
+// Continue corrections from this file      
+
 //Ex16 - AulaE 13
 //Estrutura de repetição com teste lógico no início
 console.log("ex016 (while):")

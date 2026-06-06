@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- ex008 -->
+<!-- Thats a version in HTML of the exercise -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Fine System</title>
+</head>
+<body>
+    <h1>Speed Ticket System</h1>
+
+    <label for="txtspeed">
+        Speed of the car:
+        <input type="number" name="txtspeed" id="txtspeed" placeholder="Enter the speed of the car">
+        Km/h
+    </label>
+    
+    <!-- Another way to add a button -->
+    <input type="button" value="Check" onclick="calculate()">  
+
+    <!-- Result display -->
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            let txtSpeed = window.document.querySelector('input#txtspeed')
+            let result = window.document.querySelector('div#result')
+            let speed = Number(txtSpeed.value)
+            
+            result.innerHTML = `<p>The current speed of the car is <strong>${speed}Km/h</strong></p>`
+            
+            if (speed > 60) {
+                // If the condition, speed is greater than 60, is met, this message will appear
+                result.innerHTML += '<p>You are <strong>FINED</strong> for speeding</p>'
+            }
+            // Always show this message, even if the condition is not met
+            result.innerHTML += '<p>Always wear your seatbelt when driving</p>'
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- Add toggle for unit measurement: Km/h or mph -->
