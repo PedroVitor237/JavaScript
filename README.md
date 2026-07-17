@@ -1,2 +1,3 @@
 # JavaScript
+
 Some programing notes e coding exercises by me while studying JavaScript with the CursoEmVideo's course. I will update e reorganize them.

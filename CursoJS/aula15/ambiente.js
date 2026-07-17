@@ -1,3 +1,8 @@
+// Continue corrections from this file      
+
+
+
+
 /* Aula 15 - Arrays */
 //Array/Vetor/Variável composta - Estrutura de dados que permite armazenar múltiplos valores em uma única variável
 let num = [5, 8, 7]

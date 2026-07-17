@@ -1,27 +1,36 @@
-// Continue corrections from this file      
-
-//Ex16 - AulaE 13
-//Estrutura de repetição com teste lógico no início
+//Ex16 - ClassE 13
+//While loop
+//Loop with logical test at the beginning
 console.log("ex016 (while):")
-let c = 0 //counter
-while (c < 5) {
-    console.log(`Step ${c + 1}`)
-    c++
+
+let counter = 0
+while (counter < 5) {
+    console.log(`Step ${counter + 1}`)
+    counter++
 }
 
+console.log("----------------------------------------------")
+
 //Estrutura de repetição com teste lógico no final
+//Do while loop
+//Loop with logical test at the end, //it will always execute at least once
 console.log("ex016 (do while):")
-let counter = 0 //counter
+
+counter = 0 //reset counter to 0 to reuse it in the next example loop
 do {
     console.log(`Step ${counter + 1}`)
     counter++
 } while (counter < 5)
 
-//Ex17 - AulaE 14
+console.log("----------------------------------------------")
+
+//Ex17 - ClassE 14
+//For loop
+//Loop with logical test at the beginning and a variable of control initialization in the same line 
 console.log("ex017 (for):")
-//Estrutura de repetição com variável de controle
+
 for (let i = 0; i < 5; i++) {
     console.log(`Step ${i + 1}`)
 }
 
-console.log("END")
+console.log("----------------------------------------------")
