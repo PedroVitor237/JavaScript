@@ -1,3 +1,8 @@
+// Continue corrections from this file      
+
+
+
+
 /* Aula 16 - Funções */
 //Função 01 - Par ou Ímpar
 console.log('--- Função Par ou Ímpar ---')
