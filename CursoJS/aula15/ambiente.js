@@ -1,8 +1,3 @@
-// Continue corrections from this file      
-
-
-
-
 /* Class 15 - Arrays */
 //-------------------//
 
@@ -33,6 +28,9 @@ console.log("----------------------------------------------")
 for (let i = 0; i < numbers.length; i++) {
     console.log(`The position ${i} has the value ${numbers[i]}`)
 }
+
+console.log("----------------------------------------------")
+
 //for...in loop iterates over the indices of the array, it's a more modern and cleaner way to iterate over arrays in JavaScript
 for (let i in numbers) {
     console.log(`The position ${i} has the value ${numbers[i]}`)
@@ -45,7 +43,7 @@ console.log("----------------------------------------------")
 let searchValue = 8
 let position = numbers.indexOf(searchValue) // Returns the position of the value 8 in the array
 if (position == -1) {
-    console.log('The value was not found!')
+    console.log(`The value ${searchValue} was not found in the array!`)
 } else {
     console.log(`The value ${searchValue} is in position ${position}`)
 }
@@ -55,10 +53,12 @@ if (position == -1) {
 let searchValue2 = 3
 let position2 = numbers.indexOf(searchValue2) // Returns -1, as the value 3 does not exist in the array
 if (position2 == -1) {
-    console.log('The value was not found!')
+    console.log(`The value ${searchValue2} was not found in the array!`)
 } else {
     console.log(`The value ${searchValue2} is in position ${position2}`)
 } 
+
+console.log("----------------------------------------------")
 
 //--------------------------------------//
 //Post added exercises from web research//
@@ -68,6 +68,7 @@ if (position2 == -1) {
 //The code below uses arrow functions, what is not a very beginner thing and not a very common practice in the course, but it is a good practice to learn and use them in your code. Arrow functions are a more concise way to write functions in JavaScript, and they are often used in functional programming and when working with array methods like filter(), map(), and reduce().
 
 const mixedArray = ["Alice", 42, true, "Bob", 17, false, "Charlie"];
+console.log(mixedArray); // Output: ["Alice", 42, true, "Bob", 17, false, "Charlie"]
 
 // 1. Filter only strings
 const stringsOnly = mixedArray.filter(item => typeof item === "string");
