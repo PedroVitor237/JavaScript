@@ -11,46 +11,53 @@
 let numbers = [5, 8, 7]
 console.log(`The array is ${numbers}`)
 
-// Adicionando um valor na posição 3... Tal posição não existia no array antes, então o array é expandido automaticamente
+// Adding a value to position 3... That position didn't exist in the array before, so the array is expanded automatically
 numbers[3] = 6
-console.log(`Our array is ${numbers}`)
+console.log(`Now the array is ${numbers}`)
 
-numbers.push(97) // Adiciona um valor na próxima posição disponível do array
-console.log(`Our array is ${numbers}`)
+//push() method adds a value to the next available position in the array
+numbers.push(97)
+console.log(`Now the array is ${numbers}`)
 
-//numbers.length Mostra o tamanho do array
-//.length é uma atributo, não um método, então não usa parênteses
-console.log(`Our array has ${numbers.length} positions`)
+//numbers.length Shows the size of the array
+//.length is an attribute, not a method, so it doesn't use parentheses
+console.log(`The array has ${numbers.length} positions`)
 
-numbers.sort() // Coloca os elementos do array em ordem crescente
-console.log(`Our array in ascending order is ${numbers}`)
+//sort() method places the elements of the array in ascending order
+numbers.sort()
+console.log(`The array in ascending order is ${numbers}`)
 
-console.log()
-//percurso para exibição dos valores do array
-// Método tradicional
+console.log("----------------------------------------------")
+//Iterating over the array with a for loop
+//Traditional for loop
 for (let i = 0; i < numbers.length; i++) {
     console.log(`The position ${i} has the value ${numbers[i]}`)
 }
-// Método simplificado (for...in)
+//for...in loop iterates over the indices of the array, it's a more modern and cleaner way to iterate over arrays in JavaScript
 for (let i in numbers) {
     console.log(`The position ${i} has the value ${numbers[i]}`)
 }
 /*  */
 
-console.log()
-// Buscando um valor no array
-let pos = numbers.indexOf(8) // Retorna a posição do valor 8 no array
-if (pos == -1) {
+console.log("----------------------------------------------")
+//Searching for a value in the array with indexOf() method
+//indexOf() method returns the index of the first occurrence of a specified value in the array, or -1 if the value is not found. It is useful for searching for a specific value in an array and determining its position.
+let searchValue = 8
+let position = numbers.indexOf(searchValue) // Returns the position of the value 8 in the array
+if (position == -1) {
     console.log('The value was not found!')
 } else {
-    console.log(`The value 8 is in position ${pos}`)
+    console.log(`The value ${searchValue} is in position ${position}`)
 }
 
-pos = numbers.indexOf(3) // Retorna -1, pois o valor 3 não existe no array
-if (pos == -1) {
+//--------------------------------------//
+
+let searchValue2 = 3
+let position2 = numbers.indexOf(searchValue2) // Returns -1, as the value 3 does not exist in the array
+if (position2 == -1) {
     console.log('The value was not found!')
 } else {
-    console.log(`The value 3 is in position ${pos}`)
+    console.log(`The value ${searchValue2} is in position ${position2}`)
 } 
 
 //--------------------------------------//
